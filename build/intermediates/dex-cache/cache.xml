@@ -2,130 +2,46 @@
 <items version="2" >
 
     <item
-        jar="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/classes-cef660f2c0cd351515f9a50d84713de86f4286a9.jar" />
-    </item>
-    <item
-        jar="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/classes-68e202a93415362ed69344cbd028b0feac845eed.jar" />
-    </item>
-    <item
-        jar="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-9f43ccd6b1f6d0ac706db83384f40ed8411744d3.jar" />
-    </item>
-    <item
-        jar="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-9f43ccd6b1f6d0ac706db83384f40ed8411744d3.jar" />
-    </item>
-    <item
-        jar="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/classes-68e202a93415362ed69344cbd028b0feac845eed.jar" />
-    </item>
-    <item
-        jar="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/classes-cef660f2c0cd351515f9a50d84713de86f4286a9.jar" />
-    </item>
-    <item
-        jar="/Users/daniel/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-26bcc28a0e822846f40f1260979694487aae643c.jar" />
-    </item>
-    <item
-        jar="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/classes-68e202a93415362ed69344cbd028b0feac845eed.jar" />
-    </item>
-    <item
-        jar="/Users/daniel/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-26bcc28a0e822846f40f1260979694487aae643c.jar" />
-    </item>
-    <item
-        jar="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/classes-d88f2cff68045ed4f141c917728be5e254d1494f.jar" />
-    </item>
-    <item
-        jar="/Users/daniel/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-8c8338463fcfb39dca5418adae725fa86d2eccaa.jar" />
-    </item>
-    <item
-        jar="/Users/daniel/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-26bcc28a0e822846f40f1260979694487aae643c.jar" />
-    </item>
-    <item
-        jar="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/classes-d88f2cff68045ed4f141c917728be5e254d1494f.jar" />
-    </item>
-    <item
-        jar="/Users/daniel/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jar="/Users/rajan/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-8c8338463fcfb39dca5418adae725fa86d2eccaa.jar" />
+        <dex dex="/Users/rajan/AndroidStudioProjects/testing/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-14113f5d69e31d483b9fa9b9082fb05665e953c8.jar" />
     </item>
     <item
-        jar="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jar="/Users/rajan/AndroidStudioProjects/testing/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
         jumboMode="false"
-        revision="22.0.1"
+        revision="23.0.3"
         sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-9f43ccd6b1f6d0ac706db83384f40ed8411744d3.jar" />
+        <dex dex="/Users/rajan/AndroidStudioProjects/testing/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-5ad96897dc276001a545894462585628c94ef5c7.jar" />
     </item>
     <item
-        jar="/Users/daniel/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-8c8338463fcfb39dca5418adae725fa86d2eccaa.jar" />
-    </item>
-    <item
-        jar="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
+        jar="/Users/rajan/AndroidStudioProjects/testing/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/classes-d88f2cff68045ed4f141c917728be5e254d1494f.jar" />
+        <dex dex="/Users/rajan/AndroidStudioProjects/testing/app/build/intermediates/pre-dexed/debug/classes-cf8d8b1e10a355b18e20af98a142c4c703c5a4e8.jar" />
     </item>
     <item
-        jar="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jar="/Users/rajan/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
         jumboMode="false"
-        revision="23.0.1"
+        revision="23.0.3"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/rajan/AndroidStudioProjects/testing/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-221e973fed3f719d0cf070195475199485f7d79c.jar" />
+    </item>
+    <item
+        jar="/Users/rajan/AndroidStudioProjects/testing/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/rajan/AndroidStudioProjects/testing/app/build/intermediates/pre-dexed/debug/classes-4d2fa9dc77abf95aec63379461642556bfd936be.jar" />
+    </item>
+    <item
+        jar="/Users/rajan/AndroidStudioProjects/testing/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
         sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/Users/daniel/Documents/dev/ProNeed/materiallogindemo/app/build/intermediates/pre-dexed/debug/classes-cef660f2c0cd351515f9a50d84713de86f4286a9.jar" />
+        <dex dex="/Users/rajan/AndroidStudioProjects/testing/app/build/intermediates/pre-dexed/debug/classes-a7e1d3f472e5f79c52e5557f2d6c2331a8991911.jar" />
     </item>
 
 </items>

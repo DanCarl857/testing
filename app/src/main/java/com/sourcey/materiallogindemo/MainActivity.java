@@ -1,38 +1,36 @@
 package com.sourcey.materiallogindemo;
 
 import android.Manifest;
-import android.app.Activity;
-import android.content.Intent;
-import android.media.MediaActionSound;
-import android.provider.MediaStore;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import android.net.Uri;
-import android.content.ContentResolver;
-import android.database.Cursor;
-import android.widget.ListView;
-import android.os.IBinder;
 import android.content.ComponentName;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.IBinder;
+import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.MediaController.MediaPlayerControl;
 
 import com.sourcey.materiallogindemo.MusicService.MusicBinder;
 
-import butterknife.Bind;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 
-public class MainActivity extends Activity implements MediaPlayerControl {
+public class MainActivity extends AppCompatActivity implements MediaPlayerControl {
+
+    public static final int PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 1;
 
     private ArrayList<Song> musicList;
     private ListView musicView;
@@ -43,7 +41,91 @@ public class MainActivity extends Activity implements MediaPlayerControl {
 
     private boolean paused = false, playbackPaused = false;
 
-    int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        musicView = (ListView)findViewById(R.id.song_list);
+        musicList = new ArrayList<Song>();
+        controller = new MusicController(this);
+
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) ==
+                PackageManager.PERMISSION_GRANTED) {
+            getMusicLIst();
+            setController();
+        } else {
+            // Should we show an explanation?
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.READ_CONTACTS)) {
+
+                // Show an explanation to the user *asynchronously* -- don't block
+                // this thread waiting for the user's response! After the user
+                // sees the explanation, try again to request the permission.
+
+            } else {
+
+                // No explanation needed, we can request the permission.
+
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.READ_CONTACTS},
+                        PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+
+                // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+                // app-defined int constant. The callback method gets the
+                // result of the request.
+            }
+        }
+
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+            String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    getMusicLIst();
+                    setController();
+
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        paused = true;
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        if(paused){
+            setController();
+            paused = false;
+        }
+    }
+
+    @Override
+    protected void onStop(){
+        controller.hide();
+        super.onStop();
+    }
 
     public void getMusicLIst() {
         // retrieve music information here
@@ -65,6 +147,17 @@ public class MainActivity extends Activity implements MediaPlayerControl {
                 musicList.add(new Song(thisId, thisTitle, thisArtist));
             }while(musicCursor.moveToNext());
         }
+
+        // sort the music
+        Collections.sort(musicList, new Comparator<Song>() {
+            @Override
+            public int compare(Song song, Song song2) {
+                return song.getTitle().compareTo(song2.getTitle());
+            }
+        });
+
+        SongAdapter songAdt = new SongAdapter(this, musicList);
+        musicView.setAdapter(songAdt);
     }
 
 
@@ -79,7 +172,6 @@ public class MainActivity extends Activity implements MediaPlayerControl {
     }
 
     private void setController(){
-        controller = new MusicController(this);
 
         controller.setPrevNextListeners(new View.OnClickListener(){
             @Override
@@ -114,55 +206,6 @@ public class MainActivity extends Activity implements MediaPlayerControl {
             playbackPaused=false;
         }
         controller.show(0);
-    }
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        musicView = (ListView)findViewById(R.id.song_list);
-        musicList = new ArrayList<Song>();
-
-
-        // sort the music
-        Collections.sort(musicList, new Comparator<Song>() {
-            @Override
-            public int compare(Song song, Song song2) {
-                return song.getTitle().compareTo(song2.getTitle());
-            }
-        });
-
-        SongAdapter songAdt = new SongAdapter(this, musicList);
-        musicView.setAdapter(songAdt);
-
-        getMusicLIst();
-        setController();
-
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
-
-    @Override
-    protected void onPause(){
-        super.onPause();
-        paused = true;
-    }
-
-    @Override
-    protected void onResume(){
-        super.onResume();
-        if(paused){
-            setController();
-            paused = false;
-        }
-    }
-
-    @Override
-    protected void onStop(){
-        controller.hide();
-        super.onStop();
     }
 
     private ServiceConnection musicConnection = new ServiceConnection(){
